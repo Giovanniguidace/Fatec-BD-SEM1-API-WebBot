@@ -1,0 +1,10 @@
+from selenium import webdriver
+from selenium.webdriver import chrome
+chrome = webdriver.Chrome('C:\\teste_bot\\chromedriver.exe')
+
+chrome.get('http://empresasvalesjc.com.br/busca/Acougues-14.19-0')
+lista = chrome.find_elements_by_xpath('//*[@id="anuncios"]/div')
+x = 0
+for x in lista:
+    text = x.text
+    print(text)

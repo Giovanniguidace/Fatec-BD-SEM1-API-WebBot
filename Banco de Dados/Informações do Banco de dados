@@ -1,0 +1,4 @@
+Para o Banco de dados, utlizaremos o MongoDB que é um banco NoSQL orientado a documento,de fácil manuseio,flexível,simples de se criar e ajustar
+conforme as suas necessidades,com capacidades de armazenamento e desempenho excelentes.
+Nele criamos um banco, onde estarão as collections, no qual armazenaremos os dados que serão identificados como documentos. 
+Tais dados que chegarão ao BD em formato JSON.

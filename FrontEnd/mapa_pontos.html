@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_744fae116c9941ce87a2b1e7da36bf75 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_744fae116c9941ce87a2b1e7da36bf75" ></div>
+        
+</body>
+<script>    
+    
+            var map_744fae116c9941ce87a2b1e7da36bf75 = L.map(
+                "map_744fae116c9941ce87a2b1e7da36bf75",
+                {
+                    center: [-23.4795233, -46.2698754],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 9,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f01c3718e87947998ed22e4641d8c856 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_744fae116c9941ce87a2b1e7da36bf75);
+        
+    
+            var marker_bb7b1f1392e14f9f9e9c543308520c18 = L.marker(
+                [-23.5445883, -46.6342676],
+                {}
+            ).addTo(map_744fae116c9941ce87a2b1e7da36bf75);
+        
+    
+        var popup_aa05d3006a0f42c5a7d95f1aa2556d20 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_952a1c1830a54a91a5ec4bc3143c5327 = $(`<div id="html_952a1c1830a54a91a5ec4bc3143c5327" style="width: 100.0%; height: 100.0%;">CNPJ: 000000000018302  Endereco: Endereço: Rua São Bento - de 321 ao fim - lado ímpar</div>`)[0];
+            popup_aa05d3006a0f42c5a7d95f1aa2556d20.setContent(html_952a1c1830a54a91a5ec4bc3143c5327);
+        
+
+        marker_bb7b1f1392e14f9f9e9c543308520c18.bindPopup(popup_aa05d3006a0f42c5a7d95f1aa2556d20)
+        ;
+
+        
+    
+    
+            var marker_5e1ad560bb15441a9db9d43aeb399866 = L.marker(
+                [-23.5552127, -46.6620674],
+                {}
+            ).addTo(map_744fae116c9941ce87a2b1e7da36bf75);
+        
+    
+        var popup_8c7b104bc04f4ca6b0b4560a49f01a1d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f4d53fe5c91d4b4e8114504d0789be55 = $(`<div id="html_f4d53fe5c91d4b4e8114504d0789be55" style="width: 100.0%; height: 100.0%;">CNPJ: 000000001797362  Endereco: Endereço: Avenida Paulista - de 612 a 1510 - lado par</div>`)[0];
+            popup_8c7b104bc04f4ca6b0b4560a49f01a1d.setContent(html_f4d53fe5c91d4b4e8114504d0789be55);
+        
+
+        marker_5e1ad560bb15441a9db9d43aeb399866.bindPopup(popup_8c7b104bc04f4ca6b0b4560a49f01a1d)
+        ;
+
+        
+    
+    
+            var marker_ced78233d07e491db705d4ef980b2ec5 = L.marker(
+                [-23.4834184, -46.6802535],
+                {}
+            ).addTo(map_744fae116c9941ce87a2b1e7da36bf75);
+        
+    
+        var popup_86c497164fe34087b4b13420b4cc5810 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_33cc09100e824d21b1e9ca230b197e21 = $(`<div id="html_33cc09100e824d21b1e9ca230b197e21" style="width: 100.0%; height: 100.0%;">CNPJ: 002578000004352  Endereco: Endereço: Rua André Martins</div>`)[0];
+            popup_86c497164fe34087b4b13420b4cc5810.setContent(html_33cc09100e824d21b1e9ca230b197e21);
+        
+
+        marker_ced78233d07e491db705d4ef980b2ec5.bindPopup(popup_86c497164fe34087b4b13420b4cc5810)
+        ;
+
+        
+    
+    
+            var marker_08c3eda399914c4e890e311b8619e116 = L.marker(
+                [-23.4721126, -46.6680397],
+                {}
+            ).addTo(map_744fae116c9941ce87a2b1e7da36bf75);
+        
+    
+        var popup_38a02d90f164424f953554c65cf3eda3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_48becd1b001d459285899ccab1f124dc = $(`<div id="html_48becd1b001d459285899ccab1f124dc" style="width: 100.0%; height: 100.0%;">CNPJ: 002578140001061  Endereco: Endereço: Rua José Carneiro dos Santos</div>`)[0];
+            popup_38a02d90f164424f953554c65cf3eda3.setContent(html_48becd1b001d459285899ccab1f124dc);
+        
+
+        marker_08c3eda399914c4e890e311b8619e116.bindPopup(popup_38a02d90f164424f953554c65cf3eda3)
+        ;
+
+        
+    
+    
+            var marker_0028194ffc994efb99e51c3e77da83ed = L.marker(
+                [-23.4863613, -46.6400607],
+                {}
+            ).addTo(map_744fae116c9941ce87a2b1e7da36bf75);
+        
+    
+        var popup_d1e7598d8b054c4bb558f2a5ae38ccff = L.popup({"maxWidth": "100%"});
+
+        
+            var html_577a8c69b17b4897af7500613a47914e = $(`<div id="html_577a8c69b17b4897af7500613a47914e" style="width: 100.0%; height: 100.0%;">CNPJ: 002578700001401  Endereco: Endereço: Rua Conselheiro Moreira de Barros - de 315/316 a 595/596</div>`)[0];
+            popup_d1e7598d8b054c4bb558f2a5ae38ccff.setContent(html_577a8c69b17b4897af7500613a47914e);
+        
+
+        marker_0028194ffc994efb99e51c3e77da83ed.bindPopup(popup_d1e7598d8b054c4bb558f2a5ae38ccff)
+        ;
+
+        
+    
+    
+            var marker_49031049613f4c8ba32d9d995a39d23f = L.marker(
+                [-23.549361, -46.6458787],
+                {}
+            ).addTo(map_744fae116c9941ce87a2b1e7da36bf75);
+        
+    
+        var popup_5e1faa76bf17408ba30c9c6ee7036e1c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9b4c9c9dfb84498fa480e5564900964f = $(`<div id="html_9b4c9c9dfb84498fa480e5564900964f" style="width: 100.0%; height: 100.0%;">CNPJ: 002578710001951  Endereco: Endereço: Rua Nestor Pestana</div>`)[0];
+            popup_5e1faa76bf17408ba30c9c6ee7036e1c.setContent(html_9b4c9c9dfb84498fa480e5564900964f);
+        
+
+        marker_49031049613f4c8ba32d9d995a39d23f.bindPopup(popup_5e1faa76bf17408ba30c9c6ee7036e1c)
+        ;
+
+        
+    
+    
+            var marker_6cdcf0ac015341f988180d491497cfc0 = L.marker(
+                [-23.6067315, -46.6559327],
+                {}
+            ).addTo(map_744fae116c9941ce87a2b1e7da36bf75);
+        
+    
+        var popup_2aebc7432c1a4f899102d407a93d305b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eff419b1566c4b038f4b311f369afa04 = $(`<div id="html_eff419b1566c4b038f4b311f369afa04" style="width: 100.0%; height: 100.0%;">CNPJ: 002578750001731  Endereco: Endereço: Alameda dos Aicás - de 303/304 a 591/592</div>`)[0];
+            popup_2aebc7432c1a4f899102d407a93d305b.setContent(html_eff419b1566c4b038f4b311f369afa04);
+        
+
+        marker_6cdcf0ac015341f988180d491497cfc0.bindPopup(popup_2aebc7432c1a4f899102d407a93d305b)
+        ;
+
+        
+    
+    
+            var marker_2e0b69329f104b4c920a0e7a92a83230 = L.marker(
+                [-23.5519817, -46.6392344],
+                {}
+            ).addTo(map_744fae116c9941ce87a2b1e7da36bf75);
+        
+    
+        var popup_96798d49d90242918a1cb45f49229c55 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8e2ed9fd7a874de1b79b5f35f3241595 = $(`<div id="html_8e2ed9fd7a874de1b79b5f35f3241595" style="width: 100.0%; height: 100.0%;">CNPJ: 002578760001181  Endereco: Endereço: Rua Maria Paula - lado par</div>`)[0];
+            popup_96798d49d90242918a1cb45f49229c55.setContent(html_8e2ed9fd7a874de1b79b5f35f3241595);
+        
+
+        marker_2e0b69329f104b4c920a0e7a92a83230.bindPopup(popup_96798d49d90242918a1cb45f49229c55)
+        ;
+
+        
+    
+    
+            var marker_9d40a9661185437c8af0178971adbfef = L.marker(
+                [-23.4865802, -46.6184347],
+                {}
+            ).addTo(map_744fae116c9941ce87a2b1e7da36bf75);
+        
+    
+        var popup_876f8e0bf0944a77b86affdb62ae4286 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7c0bc60984e040009714e9e89bcd8abb = $(`<div id="html_7c0bc60984e040009714e9e89bcd8abb" style="width: 100.0%; height: 100.0%;">CNPJ: 002578770001621  Endereco: Endereço: Avenida Nova Cantareira - de 4079 ao fim - lado ímpar</div>`)[0];
+            popup_876f8e0bf0944a77b86affdb62ae4286.setContent(html_7c0bc60984e040009714e9e89bcd8abb);
+        
+
+        marker_9d40a9661185437c8af0178971adbfef.bindPopup(popup_876f8e0bf0944a77b86affdb62ae4286)
+        ;
+
+        
+    
+    
+            var marker_e6d4d2fa64ff4d7c979edff069cab217 = L.marker(
+                [-23.4835043, -46.6367893],
+                {}
+            ).addTo(map_744fae116c9941ce87a2b1e7da36bf75);
+        
+    
+        var popup_baae8859a4f840b49cc3e072b90bc5a8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c395878fcb5e4fac8923b00ebb579e16 = $(`<div id="html_c395878fcb5e4fac8923b00ebb579e16" style="width: 100.0%; height: 100.0%;">CNPJ: 002578790001511  Endereco: Endereço: Rua Helena do Sacramento</div>`)[0];
+            popup_baae8859a4f840b49cc3e072b90bc5a8.setContent(html_c395878fcb5e4fac8923b00ebb579e16);
+        
+
+        marker_e6d4d2fa64ff4d7c979edff069cab217.bindPopup(popup_baae8859a4f840b49cc3e072b90bc5a8)
+        ;
+
+        
+    
+    
+            var marker_9c4ee593ef294da3b5b7b7830368a864 = L.marker(
+                [-23.8916151, -46.4244141],
+                {}
+            ).addTo(map_744fae116c9941ce87a2b1e7da36bf75);
+        
+    
+        var popup_efb53d2dbd104943b695da8366a39c4c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5ab0c4abd8084785b75106adfb67c02d = $(`<div id="html_5ab0c4abd8084785b75106adfb67c02d" style="width: 100.0%; height: 100.0%;">CNPJ: 002578800001861  Endereco: Endereço: Rua Cubatão - de 483 a 769 - lado ímpar</div>`)[0];
+            popup_efb53d2dbd104943b695da8366a39c4c.setContent(html_5ab0c4abd8084785b75106adfb67c02d);
+        
+
+        marker_9c4ee593ef294da3b5b7b7830368a864.bindPopup(popup_efb53d2dbd104943b695da8366a39c4c)
+        ;
+
+        
+    
+    
+            var marker_03b7eb47e31c474e811bbf8ff4013071 = L.marker(
+                [-23.577948, -46.6509647],
+                {}
+            ).addTo(map_744fae116c9941ce87a2b1e7da36bf75);
+        
+    
+        var popup_659b13f3d85b499a88e69223224de5ec = L.popup({"maxWidth": "100%"});
+
+        
+            var html_107a92cbc0a84b379efd28372a2ffd89 = $(`<div id="html_107a92cbc0a84b379efd28372a2ffd89" style="width: 100.0%; height: 100.0%;">CNPJ: 002578830001101  Endereco: Endereço: Rua Conselheiro Moreira de Barros - de 597/598 a 1359/1360</div>`)[0];
+            popup_659b13f3d85b499a88e69223224de5ec.setContent(html_107a92cbc0a84b379efd28372a2ffd89);
+        
+
+        marker_03b7eb47e31c474e811bbf8ff4013071.bindPopup(popup_659b13f3d85b499a88e69223224de5ec)
+        ;
+
+        
+    
+    
+            var marker_9bf10b1eb8264d83b4a7e88df998a010 = L.marker(
+                [-23.4865689, -46.5902774],
+                {}
+            ).addTo(map_744fae116c9941ce87a2b1e7da36bf75);
+        
+    
+        var popup_c3532624dcfa4c7486ddcb4e8184f227 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e29bdc0297d140af91390e9b5e63cff3 = $(`<div id="html_e29bdc0297d140af91390e9b5e63cff3" style="width: 100.0%; height: 100.0%;">CNPJ: 002578840001641  Endereco: Endereço: Rua Tutóia - até 239/240</div>`)[0];
+            popup_c3532624dcfa4c7486ddcb4e8184f227.setContent(html_e29bdc0297d140af91390e9b5e63cff3);
+        
+
+        marker_9bf10b1eb8264d83b4a7e88df998a010.bindPopup(popup_c3532624dcfa4c7486ddcb4e8184f227)
+        ;
+
+        
+    
+    
+            var marker_ec36b27674ab4f2fa2b4c8675df6d34a = L.marker(
+                [-23.491476, -46.582112],
+                {}
+            ).addTo(map_744fae116c9941ce87a2b1e7da36bf75);
+        
+    
+        var popup_bcefa8b8eb6b4d71826e7c9360724417 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2a6a1528d5ce492c8e316044de26d59c = $(`<div id="html_2a6a1528d5ce492c8e316044de26d59c" style="width: 100.0%; height: 100.0%;">CNPJ: 002578850001091  Endereco: Endereço: Avenida Boschetti - até 729/730</div>`)[0];
+            popup_bcefa8b8eb6b4d71826e7c9360724417.setContent(html_2a6a1528d5ce492c8e316044de26d59c);
+        
+
+        marker_ec36b27674ab4f2fa2b4c8675df6d34a.bindPopup(popup_bcefa8b8eb6b4d71826e7c9360724417)
+        ;
+
+        
+    
+    
+            var marker_8ce1900d6d814f94a499bd659477799f = L.marker(
+                [-23.470486, -46.5913249],
+                {}
+            ).addTo(map_744fae116c9941ce87a2b1e7da36bf75);
+        
+    
+        var popup_f423f117d3d34da9b09dc4fe27b0f4b5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8f819cf4e1324ad69e38e6303716aa86 = $(`<div id="html_8f819cf4e1324ad69e38e6303716aa86" style="width: 100.0%; height: 100.0%;">CNPJ: 002578900001111  Endereco: Endereço: Rua Ataliba Vieira</div>`)[0];
+            popup_f423f117d3d34da9b09dc4fe27b0f4b5.setContent(html_8f819cf4e1324ad69e38e6303716aa86);
+        
+
+        marker_8ce1900d6d814f94a499bd659477799f.bindPopup(popup_f423f117d3d34da9b09dc4fe27b0f4b5)
+        ;
+
+        
+    
+    
+            var marker_8063fb755bc84e85b917242b35d10786 = L.marker(
+                [-23.1, -47.433333],
+                {}
+            ).addTo(map_744fae116c9941ce87a2b1e7da36bf75);
+        
+    
+        var popup_a0f18312253a4c38bda313574f037af8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4f2ce39d07b24a929205fc589665a49a = $(`<div id="html_4f2ce39d07b24a929205fc589665a49a" style="width: 100.0%; height: 100.0%;">CNPJ: 002578920001001  Endereco: Endereço: Rua Santa Teresa de Jesus</div>`)[0];
+            popup_a0f18312253a4c38bda313574f037af8.setContent(html_4f2ce39d07b24a929205fc589665a49a);
+        
+
+        marker_8063fb755bc84e85b917242b35d10786.bindPopup(popup_a0f18312253a4c38bda313574f037af8)
+        ;
+
+        
+    
+    
+            var marker_d95776186dc2428babf98babe2e0f9a0 = L.marker(
+                [-23.5460751, -46.6467509],
+                {}
+            ).addTo(map_744fae116c9941ce87a2b1e7da36bf75);
+        
+    
+        var popup_053aeca5f2e9404aa3b00d4b607f8cc7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_675fdf2e32484200ae1aa2bdb18b2edf = $(`<div id="html_675fdf2e32484200ae1aa2bdb18b2edf" style="width: 100.0%; height: 100.0%;">CNPJ: 002578930001551  Endereco: Endereço: Rua Samambaia - de 315/316 ao fim</div>`)[0];
+            popup_053aeca5f2e9404aa3b00d4b607f8cc7.setContent(html_675fdf2e32484200ae1aa2bdb18b2edf);
+        
+
+        marker_d95776186dc2428babf98babe2e0f9a0.bindPopup(popup_053aeca5f2e9404aa3b00d4b607f8cc7)
+        ;
+
+        
+    
+    
+            var marker_e3e22de3cd784f41ae074b26d2c7c063 = L.marker(
+                [-23.5418544, -46.6455135],
+                {}
+            ).addTo(map_744fae116c9941ce87a2b1e7da36bf75);
+        
+    
+        var popup_5da62dce78404edfbc32948033bc06c3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5d91608e02684b9ca91addc63361ec9f = $(`<div id="html_5d91608e02684b9ca91addc63361ec9f" style="width: 100.0%; height: 100.0%;">CNPJ: 002578980001881  Endereco: Endereço: Rua Rego Freitas</div>`)[0];
+            popup_5da62dce78404edfbc32948033bc06c3.setContent(html_5d91608e02684b9ca91addc63361ec9f);
+        
+
+        marker_e3e22de3cd784f41ae074b26d2c7c063.bindPopup(popup_5da62dce78404edfbc32948033bc06c3)
+        ;
+
+        
+    
+    
+            var marker_06d62babb5e64887ae7e90ced5bd6b3f = L.marker(
+                [-20.3079577, -49.3797247],
+                {}
+            ).addTo(map_744fae116c9941ce87a2b1e7da36bf75);
+        
+    
+        var popup_cceb2ce690d1407a88dbd3e310111e24 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bee41036e34e4e1bae62fe6d6336d334 = $(`<div id="html_bee41036e34e4e1bae62fe6d6336d334" style="width: 100.0%; height: 100.0%;">CNPJ: 002579020001081  Endereco: Endereço: Largo do Arouche - lado par</div>`)[0];
+            popup_cceb2ce690d1407a88dbd3e310111e24.setContent(html_bee41036e34e4e1bae62fe6d6336d334);
+        
+
+        marker_06d62babb5e64887ae7e90ced5bd6b3f.bindPopup(popup_cceb2ce690d1407a88dbd3e310111e24)
+        ;
+
+        
+    
+    
+            var marker_ad1aa6507c7f4a2b8818720539c81c14 = L.marker(
+                [-23.6515462, -46.7128116],
+                {}
+            ).addTo(map_744fae116c9941ce87a2b1e7da36bf75);
+        
+    
+        var popup_bcaadfb0dcef474380ef650771cdbeda = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a26812c81a2542dd90cd9f2c9da90f7f = $(`<div id="html_a26812c81a2542dd90cd9f2c9da90f7f" style="width: 100.0%; height: 100.0%;">CNPJ: 002579050001411  Endereco: Endereço: Rua Jurupeba</div>`)[0];
+            popup_bcaadfb0dcef474380ef650771cdbeda.setContent(html_a26812c81a2542dd90cd9f2c9da90f7f);
+        
+
+        marker_ad1aa6507c7f4a2b8818720539c81c14.bindPopup(popup_bcaadfb0dcef474380ef650771cdbeda)
+        ;
+
+        
+    
+    
+            var marker_5573da80ff8248f384f092a3e562e852 = L.marker(
+                [-23.5512361, -46.6462273],
+                {}
+            ).addTo(map_744fae116c9941ce87a2b1e7da36bf75);
+        
+    
+        var popup_9e599dc50f7344d792b5aadd91a607c2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5bbae113dda448d1bf2c14fffdc83341 = $(`<div id="html_5bbae113dda448d1bf2c14fffdc83341" style="width: 100.0%; height: 100.0%;">CNPJ: 002579060001961  Endereco: Endereço: Avenida Mário Lopes Leão</div>`)[0];
+            popup_9e599dc50f7344d792b5aadd91a607c2.setContent(html_5bbae113dda448d1bf2c14fffdc83341);
+        
+
+        marker_5573da80ff8248f384f092a3e562e852.bindPopup(popup_9e599dc50f7344d792b5aadd91a607c2)
+        ;
+
+        
+    
+    
+            var marker_a4205ab026234b0cbee568cd096ad7bc = L.marker(
+                [-23.6852871, -46.6388247],
+                {}
+            ).addTo(map_744fae116c9941ce87a2b1e7da36bf75);
+        
+    
+        var popup_3009498b20f94ed09e6dbf2dafa024e0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1c577c8d47c44fff84544253182c968d = $(`<div id="html_1c577c8d47c44fff84544253182c968d" style="width: 100.0%; height: 100.0%;">CNPJ: 002579850001351  Endereco: Endereço: Avenida Nove de Julho - de 4700 ao fim - lado par</div>`)[0];
+            popup_3009498b20f94ed09e6dbf2dafa024e0.setContent(html_1c577c8d47c44fff84544253182c968d);
+        
+
+        marker_a4205ab026234b0cbee568cd096ad7bc.bindPopup(popup_3009498b20f94ed09e6dbf2dafa024e0)
+        ;
+
+        
+    
+    
+            var marker_c5a1e83a80274562b7e75ce393eaec9e = L.marker(
+                [-23.536159, -46.6518326],
+                {}
+            ).addTo(map_744fae116c9941ce87a2b1e7da36bf75);
+        
+    
+        var popup_490a5919625f4fb19ed7325915cf3dcc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_61af7597ffba42578a30319a4d5bd569 = $(`<div id="html_61af7597ffba42578a30319a4d5bd569" style="width: 100.0%; height: 100.0%;">CNPJ: 002580110001761  Endereco: Endereço: Rua Giuliana</div>`)[0];
+            popup_490a5919625f4fb19ed7325915cf3dcc.setContent(html_61af7597ffba42578a30319a4d5bd569);
+        
+
+        marker_c5a1e83a80274562b7e75ce393eaec9e.bindPopup(popup_490a5919625f4fb19ed7325915cf3dcc)
+        ;
+
+        
+    
+    
+            var marker_a4b7ab9e55e94d7c915b303434b86631 = L.marker(
+                [-23.479498, -46.643721],
+                {}
+            ).addTo(map_744fae116c9941ce87a2b1e7da36bf75);
+        
+    
+        var popup_6b9ea1f60ae24108be85d1530bd17024 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_76613e3264ff436b92fd0f2c8f0bd959 = $(`<div id="html_76613e3264ff436b92fd0f2c8f0bd959" style="width: 100.0%; height: 100.0%;">CNPJ: 002580130001651  Endereco: Endereço: Alameda Nothmann - até 731/732</div>`)[0];
+            popup_6b9ea1f60ae24108be85d1530bd17024.setContent(html_76613e3264ff436b92fd0f2c8f0bd959);
+        
+
+        marker_a4b7ab9e55e94d7c915b303434b86631.bindPopup(popup_6b9ea1f60ae24108be85d1530bd17024)
+        ;
+
+        
+    
+</script>

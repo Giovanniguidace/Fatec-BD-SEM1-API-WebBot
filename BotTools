@@ -1,0 +1,30 @@
+Ferramentas necessarias para se trabalhar com python + selenium
+
+--Variaveis Ambiente
+Caso o python não seja reconhecido no propt é necessario editar as variaveis ambientes, por padrão 
+C:\Users\User\AppData\Local\Programs\Python\Python+versao\Scripts,
+adicionem o diretorio da instalação do python na variavel PATH, dessa maneira é possivel executar o python idependente da pasta 
+
+
+--PIP
+Gerenciador de pacotes do python, acompanha o python em versões superiores a 3.x. Versões anteriores é necessario a instalação do mesmo executando o script encontrado no link a seguir: https://bootstrap.pypa.io/get-pip.py
+Copiem o codigo do link cole em um editor de texto e salve como .py e executem no interpretador python
+
+--VirtualEnv
+Cria um ambiente isolado de desenvolvimento, isolando dessa maneira o seu projeto e libs de outros projetos existentes na maquina
+Para instalar o VirtualEnv basta executar o seguinte codigo: pip install virtualenv
+para criar um ambiente virtual execute o codigo: virtualenv {diretorio onde sera criado a pasta}, caso já tenha a pasta definida execute no diretorio desejado: virtualenv .
+para ativar o venv, va para a pasta Scripts dentro do diretorio criado pelo venv e execute o activate.bat(caso seja windows), para desativar execute dentro da pasta scripts deactive.
+
+--Selenium
+Framework essencial para automação, para instalar ele basta executar o seguinte comando: pip install selenium
+
+-----------------------------------Ferramentas para desenvolvimento(opcional)-------------------------------
+Essa parte é bem pessoal e depende da afinidade de cada programador com a ferramenta, porem deixarei algumas recomendações para usuarios de Visual Studio Code.
+obs: para usuarios de pycharm, essas ferramentas fazem parte da instalação padrao do software, podendo ter algumas pequenas diferenças.
+
+Visual Studio Code:  IDE multilinguages baseado em js, sua maior vantagem é sua otimização e modularidade. Tem disponivel versoes para MACOS, Linux e Windows.
+
+Algumas extençoes para essa IDE que podem vir a ser uteis.
+Code Runner: Permite a execução do codigo a partir da IDE, não sendo necessario fazer a interpretação por linha de codigo.
+Ptyhon Extension Pack:Pacote fornecido pela microsoft para reconhecimento do python pelo vscode, alem de acompanhar o debug e intelesense e reconhecimento de alguns frameworks, como por exemplo o Django. A maior vatagem desse pack é que dispensa a configuração das extençoes de maneira idependente.

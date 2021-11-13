@@ -1,0 +1,52 @@
+@keyframes bounce {
+	0%, 20%, 60%, 100%{
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	
+	40%{
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+	80%{
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
+
+.btn{
+	text-align: center;
+	margin-top: 50px;
+}
+
+.efeito{
+	border: none;
+	color: white;
+	padding: 20px;
+	margin:10px;
+	font-size: 24px;
+	line-height: 24px;
+	border-radius:10px;
+	position:relative;
+	box-sizing: border-box;
+	cursor: pointer;
+	transition: all 400ms ease;
+}
+
+.efeito-1{
+	background: #376693;
+}
+
+.efeito-1:hover{
+	animation: bounce 1s;
+}
+
+.efeito-2{
+	background: #f18f01;
+}
+
+.efeito-2:hover{
+	animation: bounce 1s;
+}
+	
+	

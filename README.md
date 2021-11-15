@@ -26,7 +26,7 @@ Caso de Uso do Projeto:
 * Slack - Motivo: Utilizado como meio principal de contato entre a equipe;
 * Visual Studio Code - Motivo: De acordo com votação em equipe, foi decidido a utilização desta ferramenta para desenvolvimento do código;
 * MongoDB - Motivo: De acordo com votação em equipe, foi utilizado este banco não relacional para armazenar dados de CNPJ, Ramo da empresa, Latitude e Longitude, Capital;
-* Django/Python: Motivo: De acordo com votação em equipe, foi decidido pelo Django Framework devido a sua linguagem ser em python e pela possibilidade de utilizar bibliotecas de geolocalização, organização de dados, entre outros...
+* Flask/Python: Motivo: De acordo com votação em equipe, foi decidido pelo Flask Framework devido a sua linguagem ser em python e pela possibilidade de utilizar bibliotecas de geolocalização, organização de dados, entre outros...
 
 	<b>Bibliotecas Python Utilizadas:</b>
 	*   Selenium - Utilizado para coletar informações de empresa e geolocalização em sites;

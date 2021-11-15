@@ -1,8 +1,8 @@
 
-# <B>Projeto Web BOT:</b>
+# <B>Desafio: Web Bot</b>
 
 ## :orange_book: <b>Desafio da API:</b>
-O objetivo do API do primeiro semestre, consiste em criar um WEBBOT para automatizar qualquer tipo de operação que será escolhida de forma livre entre as equipes. 
+O desafio do API do primeiro semestre, consiste em criar um WEBBOT para automatizar qualquer tipo de operação que será escolhida de forma livre entre as equipes. 
 
 
 

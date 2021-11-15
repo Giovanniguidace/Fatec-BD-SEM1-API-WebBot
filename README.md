@@ -6,7 +6,7 @@ O desafio do API do primeiro semestre, consiste em criar um WEBBOT para automati
 
 
 
-## <b>:dart: Objetivo da Aplicação:</b>
+## <b>:dart: Objetivo da Aplicação Pesquisa Empresas</b>
 
 ![logo.jpg](https://gitlab.com/cesaraugusto98/webbot/-/raw/master/class/logo.jpg)
 

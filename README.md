@@ -1,11 +1,12 @@
+
 # <B>Projeto Web BOT:</b>
 
-<b>Objetivo do API:</b>
-		<p>O objetivo do API do primeiro semestre, consiste em criar um WEBBOT para automatizar qualquer tipo de operação que será escolhida de forma livre entre as equipes. </p>
+## :orange_book: <b>Desafio da API:</b>
+O objetivo do API do primeiro semestre, consiste em criar um WEBBOT para automatizar qualquer tipo de operação que será escolhida de forma livre entre as equipes. 
 
 
 
-<b>Objetivo do Projeto:</b>
+## <b>:dart: Objetivo da Aplicação:</b>
 
 ![logo.jpg](https://gitlab.com/cesaraugusto98/webbot/-/raw/master/class/logo.jpg)
 
@@ -20,7 +21,7 @@ Caso de Uso do Projeto:
 ![IMG-20190827-WA0037.jpg](https://gitlab.com/cesaraugusto98/webbot/-/raw/Mapas_geolocaliza%C3%A7ao/Imagens/IMG-20190827-WA0037.jpg)
 
 
-<b>Tecnologias Adotadas na Solução:</b>
+## <b>⚙️ Tecnologias Adotadas na Solução:</b>
 
 * Slack - Motivo: Utilizado como meio principal de contato entre a equipe;
 * Visual Studio Code - Motivo: De acordo com votação em equipe, foi decidido a utilização desta ferramenta para desenvolvimento do código;
@@ -35,7 +36,7 @@ Caso de Uso do Projeto:
 	*   Folium - Utilizado para apontar Latitude e Longitude no mapa geográfico;
 	*   Pandas - Utilizado para organizar dados de empresa e posteriormente enviar para a biblioteca Folium;
 
-<b>Contribuições individuais/pessoais</b>
+## <b> :wrench: Contribuições individuais/pessoais</b>
 
 * Levantamento de tecnologias a serem utilizadas;
 * Auxilio no levantamento dos objetivos do projeto;
@@ -48,84 +49,84 @@ Primeiramente, foi realizada a conexão com a base de dados NoSQL MongoDB, no qu
 
 Mapa de calor:
 ```python
-import pymongo
-import folium
-
-from folium import plugins
-from pymongo import MongoClient
-
-#REALIZA A CONEXÃO COM O BANCO NO MONGO DB
-db = MongoClient('mongodb+srv://admin:admin@cluster0-vuh1j.azure.mongodb.net/test?retryWrites=true&w=majority')
-
-db = db.get_database('BD_EMPRESAS')
-
-
-collection = db.empresas
-latitude = []
-longitude = []
-qtd_range = []
-coordenadas = []
-
-#GET DE TODAS AS LATITUDES NA COLLECTION EMPRESAS
-latitude = db.get_collection('empresas').distinct("latitude")
-
-qtd_range = len(latitude)
-
-#GET DE TODAS AS LONGITUDES NA COLLECTION EMPRESAS
-longitude = db.get_collection('empresas').distinct("longitude")
-
-#DELIMITA A REGIÃO DE INTERESSE NA BIBLIOTECA FOLIUM
-mapa = folium.Map(location=[-23.4795233,-46.2698754],zoom_start=9)
-
-#É ADICIONADO NO MAPA OS PONTOS COM AS LOCALIZAÇÕES DE LATITUDE E LONGITUDE
-for i in range(qtd_range):
- coordenadas.append([latitude[i],longitude[i]])
- mapa.add_child(plugins.HeatMap(coordenadas))
- 
-#OS PONTOS SÃO ENVIADOS PARA O TEMPLATE MAPA_CALOR.HTML E SÃO TRANSFORMADOS COMO MAPA DE CALOR
-mapa.save("mapa_calor.html")
+1 import pymongo
+2 import folium
+3 
+4 from folium import plugins
+5 from pymongo import MongoClient
+6  
+7 #REALIZA A CONEXÃO COM O BANCO NO MONGO DB
+8 db = MongoClient('mongodb+srv://admin:admin@cluster0-vuh1j.azure.mongodb.net/test?retryWrites=true&w=majority')
+9  #CONECTA AO BANCO DE DADOS "BD_EMPRESAS"
+10 db = db.get_database('BD_EMPRESAS')
+11
+12
+13 collection = db.empresas
+14 latitude = []
+15 longitude = []
+16 qtd_range = []
+17 coordenadas = []
+18 
+19 #GET DE TODAS AS LATITUDES NA COLLECTION EMPRESAS
+20 latitude = db.get_collection('empresas').distinct("latitude")
+21
+22 qtd_range = len(latitude)
+23
+24 #GET DE TODAS AS LONGITUDES NA COLLECTION EMPRESAS
+25 longitude = db.get_collection('empresas').distinct("longitude")
+26
+27 #DELIMITA A REGIÃO DE INTERESSE NA BIBLIOTECA FOLIUM
+28 mapa = folium.Map(location=[-23.4795233,-46.2698754],zoom_start=9)
+29
+30 #É ADICIONADO NO MAPA OS PONTOS COM AS LOCALIZAÇÕES DE LATITUDE E LONGITUDE
+31 for i in range(qtd_range):
+32 		coordenadas.append([latitude[i],longitude[i]])
+33      mapa.add_child(plugins.HeatMap(coordenadas))
+34
+35 #OS PONTOS SÃO ENVIADOS PARA O TEMPLATE MAPA_CALOR.HTML E SÃO TRANSFORMADOS COMO MAPA DE CALOR
+36 mapa.save("mapa_calor.html")
 
 ```
 
 Mapa de pontos:
 ```python
-import pymongo
-import folium
-
-from pymongo import MongoClient
-
-#REALIZA A CONEXÃO COM O BANCO NO MONGO DB
-db = MongoClient('mongodb+srv://admin:admin@cluster0-vuh1j.azure.mongodb.net/test?retryWrites=true&w=majority')
-
-db = db.get_database('BD_EMPRESAS')
-
-collection = db.empresas
-cnpj = []
-latitude = []
-longitude = []
-qtd_range = []
-endereco = []
-
-#REALIZA A COLETA DE DADOS DA EMPRESA NA COLLECTION EMPRESAS
-cnpj = db.get_collection('empresas').distinct("cnpj")
-latitude = db.get_collection('empresas').distinct("latitude")
-qtd_range = len(latitude)
-longitude = db.get_collection('empresas').distinct("longitude")
-endereco = db.get_collection('empresas').distinct("endereco")
-
-#DELIMITA A REGIÃO DE INTERESSE NA BIBLIOTECA FOLIUM
-mapa = folium.Map(location=[-23.4795233,-46.2698754],zoom_start=9)
-
-for i in range(qtd_range):
- folium.Marker([latitude[i], longitude[i]], popup='CNPJ: '+cnpj[i]+'\n Endereco: '+endereco[i]).add_to(mapa)
-
-#É ADICIONADO NO MAPA OS PONTOS COM AS LOCALIZAÇÕES DE LATITUDE E LONGITUDE
-mapa.save("mapa_pontos.html")
+1 import pymongo
+2 import folium
+3
+4 from pymongo import MongoClient
+5 
+6 #REALIZA A CONEXÃO COM O BANCO NO MONGO DB
+7 db = MongoClient('mongodb+srv://admin:admin@cluster0-vuh1j.azure.mongodb.net/test?retryWrites=true&w=majority')
+8 #CONECTA AO BANCO DE DADOS "BD_EMPRESAS"
+9 db = db.get_database('BD_EMPRESAS')
+10
+11 collection = db.empresas
+12 cnpj = []
+13 latitude = []
+14 longitude = []
+15 qtd_range = []
+16 endereco = []
+17
+18 #REALIZA A COLETA DE DADOS DA EMPRESA NA COLLECTION EMPRESAS
+19 cnpj = db.get_collection('empresas').distinct("cnpj")
+20 latitude = db.get_collection('empresas').distinct("latitude")
+21 qtd_range = len(latitude)
+22 longitude = db.get_collection('empresas').distinct("longitude")
+23 endereco = db.get_collection('empresas').distinct("endereco")
+24 
+25 #DELIMITA A REGIÃO DE INTERESSE NA BIBLIOTECA FOLIUM
+26 mapa = folium.Map(location=[-23.4795233,-46.2698754],zoom_start=9)
+27 
+28 for i in range(qtd_range):
+29	   folium.Marker([latitude[i], longitude[i]], popup='CNPJ: '+cnpj[i]+'\n Endereco: '+endereco[i]).add_to(mapa)
+30
+31 #É ADICIONADO NO MAPA OS PONTOS COM AS LOCALIZAÇÕES DE LATITUDE E LONGITUDE
+32 mapa.save("mapa_pontos.html")
 
 ```
 
 
-<b>Aprendizados Efetivos</b>
+## <b>🧠 Aprendizados Efetivos</b>
 
 * Trabalho em equipe utilizando a metodologia ágil SCRUM:
 	* Através de Daily's, Sprints, Plannings, Reviews, foi possível entender como funciona de fato a metodologia ágil e qual a proposta de sua implantação em projetos de desenvolvimento.
@@ -148,100 +149,100 @@ mapa.save("mapa_pontos.html")
 
 Coleta de dados utilizando Web Scraping
 ```python
-from selenium import webdriver
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
-from time import sleep
-
-class Driver:
-
-#MAPEAMENTO DO __INIT__ PARA A LOCALIZAÇÃO DE ARQUIVOS
- def __init__(self, cep=False, cnpj=False):
-		 directory = 'E:\\FATEC\\PI\\Files'
-		 chrome_options = webdriver.ChromeOptions()
-		 preferences = {"download.default_directory": directory}
-		 chrome_options.add_experimental_option("prefs", preferences)
-		 self.driver = webdriver.Chrome(chrome_options=chrome_options, executable_path='C:\\webbot\\chromedriver')
-		 self.wait = WebDriverWait(self.driver, 5)
-		 self.cep = cep
-		 self.cnpj = cnpj
-		 self.openSite()
- # self.driver.close()
- 
- #FUNÇÃO QUE FARÁ O ACESSO AO SITE DE MAPA CEP E COLETARÁ DADOS DE LATITUDE E LONGITUDE DE ACORDO COM O CEP COLETADO NOS DADOS DA EMPRESA 
- def openSite(self):
-		 self.driver.maximize_window()
-		 self.driver.get("https://www.mapacep.com.br/index.php")
-		 self.wait.until(EC.presence_of_element_located((By.ID, 'keywords')))
-		 self.driver.find_element_by_id('keywords').send_keys(self.cep)
-		 self.driver.find_element_by_xpath('/html/body/header/div[1]/div/div[2]/div/form/span/button').click()
-		 sleep(10)
-		 print(self.driver.find_element_by_xpath('/html/body/main/div[3]/div/div[1]/p').text)
-		 text = self.driver.find_element_by_xpath('/html/body/main/div[3]/div/div[1]/p').text.split('\n')
-		 # print(text)
-		 # exit()
-		 endereco = text[0]
-		 latitude = text[3].split(' ')[1]
-		 longitude = text[4].split(' ')[1]
-		 print([latitude, longitude, endereco])
-		 if self.cnpj:
-				 try:
-				 self.wait.until(EC.presence_of_element_located((By.ID, 'keywords')))
-				 self.driver.find_element_by_id('keywords').clear()
-				 self.driver.find_element_by_id('keywords').send_keys(self.cnpj[0:14])
-				 self.driver.find_element_by_xpath('/html/body/header/div[1]/div/div[2]/div/form/span/button').click()
-				 sleep(10)
-				 text_cnpj = self.driver.find_element_by_xpath('/html/body/main/div[5]/div/div[1]/p[1]').text
-				 text_cnpj = text_cnpj.split('\n')
-				 print(text_cnpj)
-				 codigo_atividade = text_cnpj[6].split(' ')[7]
-				 nome_empresarial = text_cnpj[4].split(': ')[1]
-				 descricao = text_cnpj[6].split(' ')[9:]
-				 # self.driver.close()
-				 return [latitude, longitude, endereco, codigo_atividade, nome_empresarial]
-		 except:
-				 # self.driver.close()
-				 return [latitude, longitude]
-		 # self.driver.quit()
-		 # print(endereco, latitude, longitude)
-
-#FUNÇÃO QUE REALIZA O DOWNLOAD DO ARQUIVO CONTENDO DADOS DE EMPRESAS
-def getArchives(self):
-		 self.driver.get(
-		 'http://receita.economia.gov.br/orientacao/tributaria/cadastros/cadastro-nacional-de-pessoas-juridicas-cnpj/dados-publicos-cnpj')
-		 links = self.driver.find_elements_by_css_selector('a.external-link')
-		 for link in links:
-				 link.click()
-				 sleep(1)
-				 self.waitDownload()
-
-#FUNÇÃO QUE AUXILIA NO DOWNLOAD DE ARQUIVOS CONTENDO DADOS DE EMPRESAS 	 
-def waitDownload(self):
-		 if not self.driver.current_url.startswith("chrome://downloads"):
-				 self.driver.get("chrome://downloads/")
-				 # elemento = self.wait.until(EC.visibility_of_element_located((By.XPATH, '//*[@id="leftSpacer"]/h1')))
-				 retorno = self.driver.execute_script("""
-				 var items = downloads.Manager.get().items_;
-				 if (items.every(e => e.state === "COMPLETE"))
-				 return items.map(e => e.fileUrl || e.file_url);
-				 else
-				 return false
-				 """)
-				 # print(retorno)
-				 count = 0
-		 while retorno == False and count < 15:
-				 sleep(1)
-				 retorno = self.driver.execute_script("""
-				 var items = downloads.Manager.get().items_;
-				 if (items.every(e => e.state === "COMPLETE"))
-				 return items.map(e => e.fileUrl || e.file_url);
-				 else
-				 return false
-				 """)
-				 count += 1
-				 # print(retorno)
-				 return
+1 from selenium import webdriver
+2 from selenium.webdriver.support.ui import WebDriverWait
+3 from selenium.webdriver.support import expected_conditions as EC
+4 from selenium.webdriver.common.by import By
+5 from time import sleep
+6
+7 class Driver:
+8 
+9 #MAPEAMENTO DO __INIT__ PARA A LOCALIZAÇÃO DE ARQUIVOS
+10 def __init__(self, cep=False, cnpj=False):
+11		 directory = 'E:\\FATEC\\PI\\Files' 
+12		 chrome_options = webdriver.ChromeOptions() 
+13		 preferences = {"download.default_directory": directory}
+14		 chrome_options.add_experimental_option("prefs", preferences)
+15		 self.driver = webdriver.Chrome(chrome_options=chrome_options, executable_path='C:\\webbot\\chromedriver')
+16		 self.wait = WebDriverWait(self.driver, 5)
+17		 self.cep = cep
+18		 self.cnpj = cnpj
+19		 self.openSite()
+20		 # self.driver.close()
+21 
+22 #FUNÇÃO QUE FARÁ O ACESSO AO SITE DE MAPA CEP E COLETARÁ DADOS DE LATITUDE E LONGITUDE DE ACORDO COM O CEP COLETADO NOS DADOS DA EMPRESA 
+23 def openSite(self):
+24		 self.driver.maximize_window()
+25		 self.driver.get("https://www.mapacep.com.br/index.php")
+26		 self.wait.until(EC.presence_of_element_located((By.ID, 'keywords')))
+27		 self.driver.find_element_by_id('keywords').send_keys(self.cep)
+28		 self.driver.find_element_by_xpath('/html/body/header/div[1]/div/div[2]/div/form/span/button').click()
+29		 sleep(10)
+30		 print(self.driver.find_element_by_xpath('/html/body/main/div[3]/div/div[1]/p').text)
+31		 text = self.driver.find_element_by_xpath('/html/body/main/div[3]/div/div[1]/p').text.split('\n')
+32		 # print(text)
+33		 # exit()
+34		 endereco = text[0]
+35		 latitude = text[3].split(' ')[1]
+36		 longitude = text[4].split(' ')[1]
+37		 print([latitude, longitude, endereco])
+38		 if self.cnpj:
+39				 try:
+40				 self.wait.until(EC.presence_of_element_located((By.ID, 'keywords')))
+41				 self.driver.find_element_by_id('keywords').clear()
+42				 self.driver.find_element_by_id('keywords').send_keys(self.cnpj[0:14])
+43				 self.driver.find_element_by_xpath('/html/body/header/div[1]/div/div[2]/div/form/span/button').click()
+44				 sleep(10)
+45				 text_cnpj = self.driver.find_element_by_xpath('/html/body/main/div[5]/div/div[1]/p[1]').text
+46				 text_cnpj = text_cnpj.split('\n')
+47				 print(text_cnpj)
+48				 codigo_atividade = text_cnpj[6].split(' ')[7]
+49				 nome_empresarial = text_cnpj[4].split(': ')[1]
+50				 descricao = text_cnpj[6].split(' ')[9:]
+51				 # self.driver.close()
+52				 return [latitude, longitude, endereco, codigo_atividade, nome_empresarial]
+53		 except:
+54				 # self.driver.close()
+55				 return [latitude, longitude]
+56		 # self.driver.quit()
+57		 # print(endereco, latitude, longitude)
+58
+59 #FUNÇÃO QUE REALIZA O DOWNLOAD DO ARQUIVO CONTENDO DADOS DE EMPRESAS
+60 def getArchives(self):
+61 		 self.driver.get(
+62		 'http://receita.economia.gov.br/orientacao/tributaria/cadastros/cadastro-nacional-de-pessoas-juridicas-cnpj/dados-publicos-cnpj')
+63		 links = self.driver.find_elements_by_css_selector('a.external-link')
+64		 for link in links:
+65				 link.click()
+66				 sleep(1)
+67				 self.waitDownload()
+68
+69 #FUNÇÃO QUE AUXILIA NO DOWNLOAD DE ARQUIVOS CONTENDO DADOS DE EMPRESAS 	 
+70 def waitDownload(self):
+71		 if not self.driver.current_url.startswith("chrome://downloads"):
+72				 self.driver.get("chrome://downloads/")
+73				 # elemento = self.wait.until(EC.visibility_of_element_located((By.XPATH, '//*[@id="leftSpacer"]/h1')))
+74				 retorno = self.driver.execute_script("""
+75				 var items = downloads.Manager.get().items_;
+76				 if (items.every(e => e.state === "COMPLETE"))
+77				 return items.map(e => e.fileUrl || e.file_url);
+78				 else
+79				 return false
+80				 """)
+81				 # print(retorno)
+82				 count = 0
+83		 while retorno == False and count < 15:
+84				 sleep(1)
+85				 retorno = self.driver.execute_script("""
+86				 var items = downloads.Manager.get().items_;
+87				 if (items.every(e => e.state === "COMPLETE"))
+88				 return items.map(e => e.fileUrl || e.file_url);
+89				 else
+90				 return false
+91				 """)
+92				 count += 1
+93				 # print(retorno)
+94				 return
 ```
 
 #

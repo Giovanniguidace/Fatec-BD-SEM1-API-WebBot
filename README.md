@@ -1,4 +1,5 @@
 
+
 # <B>Desafio: Web Bot</b>
 
 ## :orange_book: <b>Desafio da API:</b>
@@ -40,7 +41,7 @@ Caso de Uso do Projeto:
 
 * Levantamento de tecnologias a serem utilizadas;
 * Auxilio no levantamento dos objetivos do projeto;
-* Coletar Latitude e Longitude de cada empresa e apontar em um mapa os pontos utilizando a biblioteca Folium e Pandas;
+* Coletar Latitude e Longitude no banco de dados e inserir em um mapa de calor e de pontos utilizando a biblioteca Folium e Pandas;
 * Apresentação do projeto;
 
 Utilização da biblioteca Folium - Na prática:

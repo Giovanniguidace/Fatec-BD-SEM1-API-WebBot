@@ -131,6 +131,7 @@ Mapa de pontos:
 
 ```
 Exemplo mapa de pontos:
+
 ![image](https://user-images.githubusercontent.com/62898187/141614935-6b9282a0-4edb-4803-9440-74d1cf72eae8.png)
 
 ## <b>🧠 Aprendizados Efetivos</b>
@@ -254,6 +255,7 @@ Coleta de dados utilizando Web Scraping
 
 * Criação de banco de dados mongoDB no site da MongoDB:
 	* Subimos um servidor gratuito com o banco de dados NoSQL MongoDB, onde pudemos criar nosso banco de dados lá e implementar dados para o projeto. A opção gratuita possui um limite de armazenamento, mas conseguimos da mesma forma inserir todos nossos dados.
+	
 ![image](https://user-images.githubusercontent.com/62898187/141983822-ba312ba6-0a46-4467-8768-db59b7c4cd0b.png)
 Valor até o presente momento 16/11/2021
 #

@@ -1,9 +1,9 @@
 
 
 
-# API 1º Semestre
+# Projeto Integrador 1º Semestre
 
-## :orange_book: <b>Desafio da API:</b>
+## :orange_book: <b>Desafio do PI 1º Semestre:</b>
 O desafio do API do primeiro semestre, consiste em criar um WEBBOT para automatizar qualquer tipo de operação que será escolhida de forma livre entre as equipes. 
 
 

@@ -143,7 +143,7 @@ Mapa de pontos:
 		* Matriz de Habilidade de cada integrante;
 		
 * Inicialização no framework Django:
-	* O Framework Django utiliza da linguagem Python para que possamos, de maneira rápida e ágil, criar aplicações Web. Neste projeto foi aprendido a criar o projeto Django e adicionar Apps para que fossem assim criadas as funcionalidades do projeto. Com a conclusão do projeto, foi possível subir o server do Django e publicar o projeto na Web;
+	* O Framework Django utiliza da linguagem Python para que possamos, de maneira rápida e ágil, criar aplicações Web. Mesmo que esta tecnologia não tenha sido utilizada, neste projeto foi aprendido a criar o projeto Django e adicionar Apps para que fossem assim criadas as funcionalidades do projeto. Com a conclusão do projeto, foi possível subir o server do Django e publicar o projeto na Web;
 	
 * Funcionamento de web scraping;
 	* Para a coleta de dados de CNPJ e outros dados de empresa e também Latitude e Longitude de sua localização, foi utilizado o Web Scraping, que é um método de coleta de dados através dos templates em html dos sites visitados. 
